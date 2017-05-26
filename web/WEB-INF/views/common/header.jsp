@@ -7,7 +7,14 @@
 --%>
 <%@ page language="Java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<!--top-header-->
+
+<!--start-menu-->
+<script src="<%=path%>/js/simpleCart.min.js"> </script>
+<link href="<%=path%>/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="<%=path%>/js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+
+<!--top-header start-->
 <div class="top-header">
     <div class="container">
         <div class="top-header-main">
@@ -41,8 +48,8 @@
         </div>
     </div>
 </div>
-<!--top-header-->
-<!--start-logo-->
+<!--top-header end-->
+<!--start-logo start-->
 <div class="logo">
     <p>
         <a style="font-weight: bolder; font-family: MingLiU; font-size: 19px;cursor: default;">&nbsp;Jango&nbsp;&nbsp;&nbsp;MingPin</a>
@@ -51,7 +58,7 @@
         <a style="font-weight: bolder; font-family: KaiTi; font-size: 38px; color: #000000; cursor: default;">姜戈名品</a>
     </p>
 </div>
-<!--start-logo-->
+<!--start-logo end-->
 <!--bottom-header 导航条-->
 <div class="header-bottom">
     <div class="container">
