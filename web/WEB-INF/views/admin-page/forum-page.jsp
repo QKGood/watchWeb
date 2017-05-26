@@ -110,7 +110,7 @@
         </div>
         <p></p>
         <div>
-            <a href="javascript:;"onclick="editWatch();"class="easyui-linkbutton" data-options="iconCls:'icon-add'">确认</a>
+            <a href="javascript:;"onclick="addWatch();"class="easyui-linkbutton" data-options="iconCls:'icon-add'">确认</a>
         </div>
     </form>
 </div>

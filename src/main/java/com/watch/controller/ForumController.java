@@ -66,11 +66,12 @@ public class ForumController {
 
     /**
      * 查看论坛并且分页*/
-    @RequestMapping(value = "forum/{pager}",method = RequestMethod.GET)
-    public ModelAndView redirectForum(HttpServletRequest req,@PathVariable("pager")String pageNoStr) {
+    @RequestMapping(value = "forum",method = RequestMethod.GET)
+    public ModelAndView redirectForum(HttpServletRequest req) {
         logger.info("专业技术贴复刻循环输出");
         int pageNo = 1;
         int pageSize = 4;
+        String pageNoStr = req.getParameter("pageNoStr");
         Forum forum = new Forum();
         int total = forumService.queryByCount();
         int totalPage = (total % pageSize )== 0 ? total / pageSize :(total / pageSize +1);

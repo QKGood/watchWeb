@@ -32,7 +32,6 @@ public class BrandController {
     public String showBrand(Model model, HttpSession session) {
         Admin ad = (Admin)session.getAttribute("admin");
         if (ad != null) {
-            System.out.println("====================================================================测试");
             return "admin-page/brand-page";
         } else {
             return "admin-page/admin-login";
