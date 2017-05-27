@@ -10,8 +10,6 @@
     <title>帖子专区</title>
     <link rel="shortcut icon" href="<%=path%>/images/webLogo.ico" type="image/x-icon" />
     <link href="<%=path %>/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
-    <script src="<%=path %>/js/jquery-1.11.0.min.js"></script>
     <!--Custom-Theme-files-->
     <!--theme-style-->
     <link href="<%=path %>/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -21,17 +19,9 @@
     <meta name="author" content="Jango, 467524272@qq.com" />
     <meta name="Description" Content="姜戈名品,专注原单,姜戈团队,手表行业顶级复刻,为顾客定制高端复刻手表,定制正品原单鞋子,原单皮具.">
     <meta name="Kyewords" Lang="EN" Content="Jango,Watch,Genuine,Luxury, sports shoes, Famous,Leather goods,Purse">
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!--start-menu-->
-    <script src="<%=path %>/js/simpleCart.min.js"> </script>
-    <link href="<%=path %>/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-    <script type="text/javascript" src="<%=path %>/js/memenu.js"></script>
-    <script>$(document).ready(function(){$(".memenu").memenu();});</script>
-    <!--dropdown-->
-    <script src="<%=path %>/js/jquery.easydropdown.js"></script>
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
 
     <!-- Bootstrap styles -->
     <link rel="stylesheet" href="<%=path %>/css/bootstrap.min.css">
@@ -39,18 +29,17 @@
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="<%=path %>/css/font-awesome/css/font-awesome.min.css">
 
-
     <!-- Styles -->
     <link rel="stylesheet" href="<%=path %>/css/font-awesome/css/style.css" id="theme-styles">
 
-    <!--[if lt IE 9]>
-    <script src="<%=path %>/js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
-    <![endif]-->
-    <script src="<%=path %>/js/bootstrap.min.js"></script>
-    <script src="<%=path %>/js/modernizr.js"></script>
-    <script type="text/javascript" src="/js/bootstrap-paginator.js"></script>
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
+    <script src="<%=path %>/js/jquery-1.11.0.min.js"></script>
     <!--dropdown-->
-    <script src="/js/jquery.easydropdown.js"></script>
+    <script src="<%=path %>/js/jquery.easydropdown.js"></script>
+
     <%--导航栏弹出新窗口--%>
     <script>
         function mbar(sobj) {
@@ -64,9 +53,15 @@
     </script>
 </head>
 <body>
+
+<%--rightMenu start--%>
+<%@ include file="../common/rightMenu.jsp" %>
+<%--rightMenu end--%>
+
 <%--  header menu starts--%>
 <%@ include file="../common/header.jsp" %>
 <%--  header menu end--%>
+
 <!--start-breadcrumbs-->
 <div class="breadcrumbs">
     <div class="container">
@@ -79,6 +74,7 @@
     </div>
 </div>
 <!--end-breadcrumbs-->
+
 <!--contact-start-->
 <div class="contact">
     <!-- 主内容展示 -->
@@ -194,7 +190,12 @@
 <%@ include file="../common/tail.jsp" %>
 <%--  tail end--%>
 
-<%--pageBtn starts-%>
+<!--[if lt IE 9]>
+<script src="<%=path %>/js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
+<![endif]-->
+
+<%--pageBtn start--%>
+<script type="text/javascript" src="<%=path%>/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
     $(function(){
         var element = $('#bp-element');
@@ -208,13 +209,13 @@
                 itemTexts: function (type, page, current) {//设置显示的样式，默认是箭头
                     switch (type) {
                         case "first":
-                            return "首页";
+                            return "<span style='cursor: pointer'>首页</span>";
                         case "prev":
-                            return "上一页";
+                            return "<span style='cursor: pointer'>上一页</span>";
                         case "next":
-                            return "下一页";
+                            return "<span style='cursor: pointer'>下一页</span>";
                         case "last":
-                            return "末页";
+                            return "<span style='cursor: pointer'>末页</span>";
                         case "page":
                             return page;
                     }

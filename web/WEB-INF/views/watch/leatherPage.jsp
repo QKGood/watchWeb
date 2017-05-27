@@ -21,11 +21,7 @@
     <meta name="Description" Content="姜戈名品,专注原单,姜戈团队,手表行业顶级复刻,为顾客定制高端复刻手表,定制正品原单鞋子,原单皮具.">
     <meta name="Kyewords" Lang="EN" Content="Jango,Watch,Genuine,Luxury, sports shoes, Famous,Leather goods,Purse">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!--start-menu-->
-    <script src="<%=path %>/js/simpleCart.min.js"> </script>
-    <link href="<%=path %>/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-    <script type="text/javascript" src="/js/memenu.js"></script>
-    <script type="text/javascript" src="/js/bootstrap-paginator.js"></script>
+
     <script>
         $(document).ready(function(){$(".memenu").memenu();});
         /*导航栏标题*/
@@ -177,6 +173,7 @@
 <%--  tail end--%>
 
 <%--pageBtn start--%>
+<script type="text/javascript" src="<%=path %>/js/bootstrap-paginator.js"></script>
 <script type="text/javascript">
     $(function(){
         var element1 = $('#bp-element1');
@@ -207,19 +204,20 @@
                 itemTexts: function (type, page, current) {//设置显示的样式，默认是箭头
                     switch (type) {
                         case "first":
-                            return "首页";
+                            return "<span style='cursor: pointer'>首页</span>";
                         case "prev":
-                            return "上一页";
+                            return "<span style='cursor: pointer'>上一页</span>";
                         case "next":
-                            return "下一页";
+                            return "<span style='cursor: pointer'>下一页</span>";
                         case "last":
-                            return "末页";
+                            return "<span style='cursor: pointer'>末页</span>";
                         case "page":
                             return page;
                     }
                 },
                 //点击事件
                 onPageClicked: function (event, originalEvent, type, page) {
+
                     if(${check == 1}){
                         location.href = url+"?page=" + page;
                     }else if(${check == 2}){
@@ -248,5 +246,6 @@
     });
 </script>
 <%--pageBtn end--%>
+
 </body>
 </html>

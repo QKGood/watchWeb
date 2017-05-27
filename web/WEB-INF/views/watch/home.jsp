@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="author" content="Jango, 467524272@qq.com" />
-    <meta name="Description" Content="姜戈名品,专注原单,姜戈团队,手表行业顶级复刻,为顾客定制高端复刻手表,定制正品原单鞋子,原单皮具.">
+    <meta name="Description" Content="姜戈名品,专注原单,姜戈团队坚持实拍测评,手表行业顶级复刻,为顾客定制顶级高端复刻手表,定制正品原单鞋子,原单皮具.姜戈团队力求完美,专注细节.">
     <meta name="Kyewords" Lang="EN" Content="Jango,Watch,Genuine,Luxury, sports shoes, Famous,Leather goods,Purse">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 

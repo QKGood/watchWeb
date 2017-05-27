@@ -138,16 +138,44 @@
 
     }
 </style>
+<script type="text/javascript">
+    function pageScroll() {
+        window.scrollBy(0,-25);
+        scrolldelay = setTimeout('pageScroll()',0.1);
+        if(document.body.scrollTop== 0) clearTimeout(scrolldelay);
+    }
+
+    function pageEnd() {
+        window.scrollBy(0,18);
+        scrolldelayEnd = setTimeout('pageEnd()',0.1);
+
+        var $document = $(document);//缓存一下$(document)
+        $(window).scroll(function(){
+            var $this = $(this),
+                scrollTop = $this.scrollTop(),
+                scrollHeight = $document.height(),
+                windowHeight = $this.height();
+            if(scrollTop + windowHeight >= scrollHeight){
+                clearTimeout(scrolldelayEnd);
+            }
+        });
+
+    }
+</script>
 <%--rightMenu end--%>
 
 <!--右侧悬浮菜单-->
 <div class="slide">
     <ul class="icon">
-        <li class="up" title="顶端"></li>
+        <li class="up" title="顶端">
+            <button style="background: transparent;cursor: pointer;margin-top: 15px;height: 50%;width: 100%;border: none;" onclick="pageScroll();"></button>
+        </li>
         <li class="qq"></li>
         <li class="tel"></li>
         <li class="wx"></li>
-        <li class="down" title="底部"></li>
+        <li class="down" title="底部">
+            <button style="background: transparent;cursor: pointer;margin-top: 15px;height: 50%;width: 100%;border: none;" onclick="pageEnd();"></button>
+        </li>
     </ul>
     <ul class="info">
         <li class="qq">
