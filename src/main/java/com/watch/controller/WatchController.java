@@ -336,7 +336,6 @@ public class WatchController {
                 }
             }
         }catch (IOException e){
-
         }
         getComboxId(watch);
         watchService.add(watch);
