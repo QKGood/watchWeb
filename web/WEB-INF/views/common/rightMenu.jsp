@@ -139,12 +139,13 @@
     }
 </style>
 <script type="text/javascript">
+    /*回到顶部*/
     function pageScroll() {
         window.scrollBy(0,-25);
         scrolldelay = setTimeout('pageScroll()',0.1);
         if(document.body.scrollTop== 0) clearTimeout(scrolldelay);
     }
-
+    /*回到底部*/
     function pageEnd() {
         window.scrollBy(0,18);
         scrolldelayEnd = setTimeout('pageEnd()',0.1);
